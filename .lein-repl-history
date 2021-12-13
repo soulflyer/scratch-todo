@@ -1,0 +1,7 @@
+(in-ns 'dev/user.clj)
+(in-ns 'dev/user)
+(in-ns 'user)
+(start-dev-system)
+(shadow.server/start!)
+(shadow.api/watch :app)
+quit
