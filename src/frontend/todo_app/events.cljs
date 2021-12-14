@@ -13,7 +13,7 @@
 
 (re-frame/reg-event-db
   ::add-todos->db
-  (fn [db [_ {:keys [response]}]]
+  (fn [db [_ response]]
     (assoc db :todos response)))
 
 (re-frame/reg-event-db

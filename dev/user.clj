@@ -23,8 +23,8 @@
 (defn start-dev-system
   []
   (stop-dev-system)
-  (shadow.server/start!)
-  (shadow.api/watch :app)
+  #_(shadow.server/start!)
+  #_(shadow.api/watch :app)
   (reset! dev-sys (->system dev-app-config)))
 
 (comment

@@ -5,3 +5,14 @@
 (shadow.server/start!)
 (shadow.api/watch :app)
 quit
+(in-ns 'user')
+(ns-publics 'user)
+(in-ns 'user)
+(ns-publics 'user)
+(defn start-dev-system
+  []
+  (stop-dev-system)
+  #_(shadow.server/start!)
+  #_(shadow.api/watch :app)
+  (reset! dev-sys (->system dev-app-config)))
+(start-dev-system)

@@ -1,8 +1,8 @@
 goog.provide('ajax.easy');
 ajax.easy.default_formats = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["application/transit+json",ajax.transit.transit_response_format], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["application/transit+transit",ajax.transit.transit_response_format], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["application/json",ajax.json.json_response_format], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text/plain",ajax.formats.text_response_format], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["text/html",ajax.formats.text_response_format], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["*/*",ajax.formats.raw_response_format], null)], null));
 ajax.easy.detect_response_format = (function ajax$easy$detect_response_format(var_args){
-var G__61598 = arguments.length;
-switch (G__61598) {
+var G__76673 = arguments.length;
+switch (G__76673) {
 case 0:
 return ajax.easy.detect_response_format.cljs$core$IFn$_invoke$arity$0();
 
@@ -41,9 +41,9 @@ return new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"wr
 if((format == null)){
 return ajax.transit.transit_request_format.cljs$core$IFn$_invoke$arity$1(format_params);
 } else {
-var G__61599 = format;
-var G__61599__$1 = (((G__61599 instanceof cljs.core.Keyword))?G__61599.fqn:null);
-switch (G__61599__$1) {
+var G__76676 = format;
+var G__76676__$1 = (((G__76676 instanceof cljs.core.Keyword))?G__76676.fqn:null);
+switch (G__76676__$1) {
 case "transit":
 return ajax.transit.transit_request_format.cljs$core$IFn$_invoke$arity$1(format_params);
 
@@ -75,9 +75,9 @@ return null;
 });
 ajax.easy.keyword_response_format_element = (function ajax$easy$keyword_response_format_element(format,format_params){
 if(cljs.core.vector_QMARK_(format)){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.first(format),(function (){var G__61600 = cljs.core.second(format);
-var G__61601 = format_params;
-return (ajax.easy.keyword_response_format_element.cljs$core$IFn$_invoke$arity$2 ? ajax.easy.keyword_response_format_element.cljs$core$IFn$_invoke$arity$2(G__61600,G__61601) : ajax.easy.keyword_response_format_element.call(null,G__61600,G__61601));
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.first(format),(function (){var G__76677 = cljs.core.second(format);
+var G__76678 = format_params;
+return (ajax.easy.keyword_response_format_element.cljs$core$IFn$_invoke$arity$2 ? ajax.easy.keyword_response_format_element.cljs$core$IFn$_invoke$arity$2(G__76677,G__76678) : ajax.easy.keyword_response_format_element.call(null,G__76677,G__76678));
 })()], null);
 } else {
 if(cljs.core.map_QMARK_(format)){
@@ -89,9 +89,9 @@ return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"re
 if((format == null)){
 return ajax.easy.detect_response_format.cljs$core$IFn$_invoke$arity$0();
 } else {
-var G__61602 = format;
-var G__61602__$1 = (((G__61602 instanceof cljs.core.Keyword))?G__61602.fqn:null);
-switch (G__61602__$1) {
+var G__76679 = format;
+var G__76679__$1 = (((G__76679 instanceof cljs.core.Keyword))?G__76679.fqn:null);
+switch (G__76679__$1) {
 case "transit":
 return ajax.transit.transit_response_format.cljs$core$IFn$_invoke$arity$1(format_params);
 
@@ -134,8 +134,8 @@ return null;
  */
 ajax.easy.keyword_response_format = (function ajax$easy$keyword_response_format(format,format_params){
 if(cljs.core.vector_QMARK_(format)){
-return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.vector,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__61603_SHARP_){
-return ajax.easy.keyword_response_format_element(p1__61603_SHARP_,format_params);
+return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.vector,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__76684_SHARP_){
+return ajax.easy.keyword_response_format_element(p1__76684_SHARP_,format_params);
 }),format));
 } else {
 return ajax.easy.keyword_response_format_element(format,format_params);
@@ -171,12 +171,12 @@ ajax.easy.default_error_handler = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(a
 /**
  * Converts easy API handlers to a `ajax-request` handler
  */
-ajax.easy.transform_handler = (function ajax$easy$transform_handler(p__61606){
-var map__61607 = p__61606;
-var map__61607__$1 = (((((!((map__61607 == null))))?(((((map__61607.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__61607.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__61607):map__61607);
-var handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61607__$1,new cljs.core.Keyword(null,"handler","handler",-195596612));
-var error_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61607__$1,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776));
-var finally$ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61607__$1,new cljs.core.Keyword(null,"finally","finally",1589088705));
+ajax.easy.transform_handler = (function ajax$easy$transform_handler(p__76687){
+var map__76688 = p__76687;
+var map__76688__$1 = (((((!((map__76688 == null))))?(((((map__76688.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__76688.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__76688):map__76688);
+var handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__76688__$1,new cljs.core.Keyword(null,"handler","handler",-195596612));
+var error_handler = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__76688__$1,new cljs.core.Keyword(null,"error-handler","error-handler",-484945776));
+var finally$ = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__76688__$1,new cljs.core.Keyword(null,"finally","finally",1589088705));
 var h = (function (){var or__4126__auto__ = handler;
 if(cljs.core.truth_(or__4126__auto__)){
 return or__4126__auto__;
@@ -191,12 +191,12 @@ return or__4126__auto__;
 return cljs.core.deref(ajax.easy.default_error_handler);
 }
 })();
-return (function ajax$easy$transform_handler_$_easy_handler(p__61612){
-var vec__61613 = p__61612;
-var ok = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__61613,(0),null);
-var result = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__61613,(1),null);
-var fexpr__61616_61642 = (cljs.core.truth_(ok)?h:e);
-(fexpr__61616_61642.cljs$core$IFn$_invoke$arity$1 ? fexpr__61616_61642.cljs$core$IFn$_invoke$arity$1(result) : fexpr__61616_61642.call(null,result));
+return (function ajax$easy$transform_handler_$_easy_handler(p__76690){
+var vec__76691 = p__76690;
+var ok = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__76691,(0),null);
+var result = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__76691,(1),null);
+var fexpr__76695_76717 = (cljs.core.truth_(ok)?h:e);
+(fexpr__76695_76717.cljs$core$IFn$_invoke$arity$1 ? fexpr__76695_76717.cljs$core$IFn$_invoke$arity$1(result) : fexpr__76695_76717.call(null,result));
 
 if(cljs.core.fn_QMARK_(finally$)){
 return (finally$.cljs$core$IFn$_invoke$arity$0 ? finally$.cljs$core$IFn$_invoke$arity$0() : finally$.call(null));
@@ -211,15 +211,15 @@ return null;
  * If you don't want this to happen, use ajax-request directly
  * (and use advanced optimisation).
  */
-ajax.easy.transform_opts = (function ajax$easy$transform_opts(p__61617){
-var map__61618 = p__61617;
-var map__61618__$1 = (((((!((map__61618 == null))))?(((((map__61618.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__61618.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__61618):map__61618);
-var opts = map__61618__$1;
-var method = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61618__$1,new cljs.core.Keyword(null,"method","method",55703592));
-var format = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61618__$1,new cljs.core.Keyword(null,"format","format",-1306924766));
-var response_format = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61618__$1,new cljs.core.Keyword(null,"response-format","response-format",1664465322));
-var params = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61618__$1,new cljs.core.Keyword(null,"params","params",710516235));
-var body = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__61618__$1,new cljs.core.Keyword(null,"body","body",-2049205669));
+ajax.easy.transform_opts = (function ajax$easy$transform_opts(p__76696){
+var map__76697 = p__76696;
+var map__76697__$1 = (((((!((map__76697 == null))))?(((((map__76697.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__76697.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__76697):map__76697);
+var opts = map__76697__$1;
+var method = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__76697__$1,new cljs.core.Keyword(null,"method","method",55703592));
+var format = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__76697__$1,new cljs.core.Keyword(null,"format","format",-1306924766));
+var response_format = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__76697__$1,new cljs.core.Keyword(null,"response-format","response-format",1664465322));
+var params = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__76697__$1,new cljs.core.Keyword(null,"params","params",710516235));
+var body = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__76697__$1,new cljs.core.Keyword(null,"body","body",-2049205669));
 var needs_format = (((body == null)) && (cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(method,"GET")));
 var rf = (cljs.core.truth_((function (){var or__4126__auto__ = format;
 if(cljs.core.truth_(or__4126__auto__)){
